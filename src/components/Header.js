@@ -35,9 +35,9 @@ const Header = () => {
          // Cleanup function
     }, [dispatch]); // Make sure to include dispatch in the dependency array
     return (
-        <div className='absolute w-screen px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
+        <div className='absolute w-screen  px-8 py-2 bg-gradient-to-b from-black z-10 flex justify-between'>
             <img
-                className='w-36'
+                className='w-40'
                src={LOGO}
                 alt="logo"
             />
@@ -45,7 +45,7 @@ const Header = () => {
             {user && (
                 <div className='flex p-2'>
                     <img
-                        className='w-12 h-12'
+                        className='w-20 h-12'
                         alt='usericon'
                         src={user.photoURL} // corrected property name from phototURL to photoURL
                     />
