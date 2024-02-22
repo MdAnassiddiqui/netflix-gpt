@@ -6,6 +6,7 @@ import { API_OPTIONS } from '../utils/constants';
 import { addGptMovieResult } from '../utils/gptSlice';
 
 const GptSearchBar = () => {
+
     const dispatch =useDispatch();
     const langKey =useSelector((store) => store.config.lang);
     const searchText =useRef(null);
@@ -42,8 +43,8 @@ const gptResults = await openai.chat.completions.create({
   dispatch(addGptMovieResult({movieNames: gptMovies ,movieResults:tmdbResults}));
 };
   return (
-    <div className='pt-[10%] flex justify-center'>
-      <form className=' w-1/2 bg-black grid grid-cols-12'
+    <div className='pt-[35%] md:pt-[10%] flex justify-center'>
+      <form className='w-full md:w-1/2 bg-black grid grid-cols-12'
        onSubmit={(e) => e.preventDefault()}
       >
     
@@ -58,4 +59,4 @@ const gptResults = await openai.chat.completions.create({
   )
 }
 
-export default GptSearchBar
+export default GptSearchBar ;
